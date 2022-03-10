@@ -18,7 +18,7 @@ public class ScoreController {
 	private ScoreService scoreService;
 	
 	@PutMapping
-	public MovieDTO findById(@RequestBody ScoreDTO scoreDTO){
+	public MovieDTO saveScore(@RequestBody ScoreDTO scoreDTO){
 		MovieDTO dto = scoreService.saveScore(scoreDTO);
 		return dto;
 	}

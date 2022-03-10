@@ -28,7 +28,6 @@ public class ScoreService {
 	@Transactional
 	public MovieDTO saveScore(ScoreDTO scoreDTO) {
 		
-		//checks if user already exists in the database
 		User user = userRepository.findByEmail(scoreDTO.getEmail());
 		if(user == null) {
 			user = new User();
